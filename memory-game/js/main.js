@@ -21,23 +21,23 @@ cardImage: "images/king-of-diamonds.png"
 }
 ];
 
-var cardsInPlay = []
+var cardsInPlay = [];
 
 var checkForMatch = function() { 
-	if (cardsInPlay[0] === cardsInPlay[1]) {
-		alert("You found a match!");
-} else {
-		alert("Sorry, try again.");
-};
+		if (cardsInPlay[0] === cardsInPlay[1]) {
+			alert("You found a match!");
+		} else {
+			alert("Sorry, try again.");
+	};
 }
 
 var flipCard = function() {
-	var cardId = this.getAttribute('data-id');
-	this.setAttribute("src", cards[cardId].cardImage);
-	cardsInPlay.push(cards[cardId].rank);
-if (cardsInPlay.length === 2) {
-	checkForMatch();
-};
+		var cardId = this.getAttribute('data-id');
+		this.setAttribute("src", cards[cardId].cardImage);
+		cardsInPlay.push(cards[cardId].rank);
+		if (cardsInPlay.length === 2) {
+		checkForMatch();
+	};
 }
 
 var createBoard = function() {
